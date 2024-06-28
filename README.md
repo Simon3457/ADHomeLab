@@ -1,7 +1,7 @@
 # Active Directory Home Lab
 
 <h2>Description</h2>
-This lab goes through the process of creating a Windows Server virtual machine on Oracle VirtualBox to simulate creating users and administrating them within a business enmvironment.
+This lab goes through the process of creating a Windows Server virtual machine on Oracle VirtualBox to simulate creating users and administrating them within a business environment.
 <br />
 
 
