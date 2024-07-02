@@ -174,23 +174,40 @@ This lab goes through the process of creating a Windows Server virtual machine o
     <li>At the top right of the Server Manager dashboard, click “Tools” & go to “DHCP”</li>
     <li>We need to give our Domain Controller a scope that will give IP addresses in a certain range
       <ol>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
+        <li>172.16.0.100 with a subnet mask</li>
+        <li>Go to DHCP server dropdown & right click IPv4 & click “New Scope…”</li>
+        <li>Click next, enter name (172.16.0.100-200) & click next</li>
+        <li>Enter start IP & end IP addresses (in this case, 172.16.0.100 & 172.16.0.200), click next</li>
+        <li>We can enter ranges to exclude on the next page, but for the lab we don’t need to. Click next</li>
+        <li>We can enter lease duration on the next page, but for the lab we don’t need to. Click next</li>
+        <li>Select “Yes, I want to configure these options now” & click next</li>
+        <li>Enter the IP address of the Domain Controller as the router, click “Add” & click next</li>
+        <li>Make sure the domain created earlier is the Parent domain (in this case, “mydomain.com”)</li>
+        <li>Click next, you can enter WINS servers but they’re old, click next</li>
+        <li>Select “Yes, I want to activate this scope now”, click next & click finish (You may have to right click “dc.domain.com”, click on “Authorize”, right click “dc.domain.com” & click “Refresh”)</li>
       </ol>
     </li>
   </ol>
 </li>
 <br />
 <br />
+
+<li><b>Create Users from PowerShell commands in Active Directory</b>
+  <ol>
+    <li>Go to Server Manager Dashboard, click “Configure this local server”</li>
+    <li>Go to “IE Enhanced Security Configuration” setting & turn it off for admins & users, click ok</li>
+    <li>Copy over PowerShell script files from internet, or write the script yourself</li>
+    <li>Click Start menu icon, click Windows PowerShell folder & right-click “Windows PowerShell ISE”</li>
+    <li>Go to “more”, click “Run as Administrator” & click “Yes”</li>
+    <li>Click second to left top folder icon “Open Script”, select script & click “Open”</li>
+  </ol>
+</li>
+<br />
+<br />
+
+</ol>
+
+
 <!--
  ```diff
 - text in red
