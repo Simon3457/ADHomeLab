@@ -196,10 +196,17 @@ This lab goes through the process of creating a Windows Server virtual machine o
   <ol>
     <li>Go to Server Manager Dashboard, click “Configure this local server”</li>
     <li>Go to “IE Enhanced Security Configuration” setting & turn it off for admins & users, click ok</li>
-    <li>Copy over PowerShell script files from internet, or write the script yourself</li>
     <li>Click Start menu icon, click Windows PowerShell folder & right-click “Windows PowerShell ISE”</li>
     <li>Go to “more”, click “Run as Administrator” & click “Yes”</li>
+    <li>**DON'T DO THIS OUTSIDE OF THE CONTEXT OF THE LAB**
+      <ol>
+        <li>On the PowerShell side (blue bottom screen), type "Set-ExecutionPolicy Unrestricted" & press enter</li>
+        <li>A warning pop-up will appear, click "Yes to All"</li>
+      </ol>
+    </li>
     <li>Click second to left top folder icon “Open Script”, select script & click “Open”</li>
+    <li>Copy over PowerShell script from here (), or write the script yourself</li>
+    <li></li>
   </ol>
 </li>
 <br />
