@@ -14,9 +14,15 @@ This lab goes through the process of creating a Windows Server virtual machine o
 
 - <b>Oracle VM VirtualBox</b>
 - <b>Windows Server 2019</b>
+- <b>Windows 10 Pro</b>
 
 <h2>Lab walk-through:</h2>
+<p align="center">
+  Active Directory Home Lab Model: <br/>
+  <img src="https://i.imgur.com/9SV2uR0.png" height="75%" width="75%" alt="AD Home Lab Model"/>
+</p>
 <ol>
+  <h3><b>PART 1 – Setup Environment</b></h3>
   <li><b>Install Oracle VM VirtualBox</b>
     <ol>
       <li>Go to https://www.virtualbox.org/wiki/Downloads</li>
@@ -26,35 +32,6 @@ This lab goes through the process of creating a Windows Server virtual machine o
   </li>
   <br />
   <br />
-
-  <li><b>Install & create installation media for Windows 10 iso file</b>
-    <ol>
-      <li>From link https://www.microsoft.com/en-us/software-download/windows10</li>
-      <li>Under “Create Windows 10 installation media”, click on “Download tool now”</li>
-      <li>Click on downloaded tool, accept terms & choose option “Create installation media”</li>
-      <li>Choose default options for architecture, choose “ISO file” option for media to use</li>
-    </ol>
-  </li>
-  <br />
-  <br />
- 
- <li><b>Setup Windows 10 VM</b>
-   <ol>
-     <li>Open VirtualBox application, click on “New” button</li>
-     <li>Pick Windows 10 disk as the ISO image, choose a name & destination folder for the VM</li>
-     <li>Write a username & password (remember for later), as well as a hostname, then pick its hardware settings</li>
-     <li><b>**FIX ISSUE “Windows cannot read the product key setting from the unattended answer file”</b>
-       <ol>
-         <li>Go to settings -> system -> motherboard tab, unselect “floppy” in the boot order</li>
-         <li>Go to settings -> general -> advanced tab, you can see your virtual machine folder path</li>
-         <li>Go to file explorer where the virtual machine folder is, and remove disk file “unattended” (there will be a long string of random characters following it)</li>
-         <li>Ignore “Virtual Machine ran into a fatal problem” error message & set up as normal</li>
-       </ol>
-     </li>
-   </ol>
- </li>
- <br />
- <br />
 
 <li><b>Install Windows Server iso file</b>
   <ol>
@@ -191,6 +168,7 @@ This lab goes through the process of creating a Windows Server virtual machine o
 <br />
 <br />
 
+<h3><b>PART 2 – Setup Users & Computers on the Server</b></h3>
 <li><b>Create Users from PowerShell commands in Active Directory</b>
   <ol>
     <li>Go to Server Manager Dashboard, click “Configure this local server”</li>
@@ -205,11 +183,55 @@ This lab goes through the process of creating a Windows Server virtual machine o
     </li>
     <li>Click second to left top folder icon “Open Script”, select script & click “Open”</li>
     <li>Copy over PowerShell script from here (https://github.com/Simon3457/ADHomeLab/blob/main/ADScript/CreateUsers.ps1), or write the script yourself</li>
-    <li>Run the script from Windows PowerShell ISE. Users should be populating in the "_USERS" AD group</li>
+    <li>Place script in same directory as your users text file & navigate to that folder within PowerShell ISE</li>
+    <li>Run the script from PowerShell ISE, users should be populating in the "_USERS" AD group</li>
+    <li>Once the script is done, leave the server running & we wil go to the next step</li>
   </ol>
 </li>
 <br />
 <br />
+
+<li><b>Install & create installation media for Windows 10 iso file</b>
+    <ol>
+      <li>From link https://www.microsoft.com/en-us/software-download/windows10</li>
+      <li>Under “Create Windows 10 installation media”, click on “Download tool now”</li>
+      <li>Click on downloaded tool, accept terms & choose option “Create installation media”</li>
+      <li>Choose default options for architecture, choose “ISO file” option for media to use</li>
+    </ol>
+  </li>
+  <br />
+  <br />
+ 
+ <li><b>Setup Windows 10 VM for client</b>
+   <ol>
+     <li>Open VirtualBox Manager application, click on “New” button</li>
+     <li>Pick Windows 10 disk as the ISO image, choose a name & destination folder for the VM</li>
+     <li>Write a username & password we created earlier (for this example, password is "Password1" and username is "sboudreau"), as well as a hostname</li>
+     <li>Pick its hardware settings</li>
+     <li>Click next (x2) & click finish</li>
+     <li>Right-click the new VM & click "settings"</li>
+     <li>Go to "Advanced" tab, change "Shared Clipboard" and "Drag'N'Drop" settings to "Bidiretional"</li>
+     <li>Go to "Network" section, change the "Attached to" setting to "Internal Network" & click ok</li>
+     <li><b>**FIX ISSUE “Windows cannot read the product key setting from the unattended answer file”**</b>
+       <ol>
+         <li>Go to settings -> system -> motherboard tab, unselect “floppy” in the boot order</li>
+         <li>Go to settings -> general -> advanced tab, you can see your virtual machine folder path</li>
+         <li>Go to file explorer where the virtual machine folder is, and remove all files “unattended” (there will be a long string of random characters following it)</li>
+         <li>Ignore “Virtual Machine ran into a fatal problem” error message & set up as normal (following steps)</li>
+       </ol>
+     </li>
+     <li>Click next & click "Install Now"</li>
+     <li>Click "I don't have a product key"</li>
+     <li>Select "Windows 10 Pro" & click next</li>
+     <li>Check "I accept the license terms" & click next</li>
+     <li>Click "Custom: Install Windows only (advanced)" option, click next & wait for installation to complete</li>
+     <li>Select region, click Yes</li>
+     <li>Select keyboard layout, click Yes</li>
+     <li>Select second keyboard, or just click Skip</li>
+   </ol>
+ </li>
+ <br />
+ <br />
 
 </ol>
 
