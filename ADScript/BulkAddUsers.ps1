@@ -4,15 +4,12 @@ Import-Module ActiveDirectory
 # Store the data from the csv file in the $ADUsers variable
 $ADUsers = Import-Csv "C:\temp\AddUsers.csv" -Delimiter ","
 
-# Define UPN
-$UPN = "mydomain.com"
-
 # Loop through each row containing user details in the CSV file
 foreach ($User in $ADUsers) {
     try {
         # Define the parameters using a hashtable
         $UserParams = @{
-            SamAccountName       = $User.username
+            SamAccountName        = $User.username
             UserPrincipalName     = $User.email
             Name                  = "$($User.firstname) $($User.lastname)"
             GivenName             = $User.firstname
