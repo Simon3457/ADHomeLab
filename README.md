@@ -4,7 +4,6 @@
 This lab goes through the process of creating a Windows Server virtual machine on Oracle VirtualBox to simulate creating users and administrating them within a business environment.
 <br />
 
-
 <h2><b>Languages and Utilities</b></h2>
 
 - <b>PowerShell</b>
@@ -182,7 +181,7 @@ This lab goes through the process of creating a Windows Server virtual machine o
       </ol>
     </li>
     <li>Click second to left top folder icon “Open Script”, select script & click “Open”</li>
-    <li>Copy over PowerShell script from here (https://github.com/Simon3457/ADHomeLab/blob/main/ADScript/CreateUsers.ps1), or write the script yourself</li>
+    <li>Copy over PowerShell script from <a href="https://github.com/Simon3457/ADHomeLab/blob/main/ADScript/CreateUsers.ps1">here</a>, or write the script yourself</li>
     <li>Place script in same directory as your users text file & navigate to that folder within PowerShell ISE</li>
     <li>Run the script from PowerShell ISE, users should be populating in the "_USERS" AD group</li>
     <li>Once the script is done, leave the server running & we wil go to the next step</li>
@@ -228,13 +227,65 @@ This lab goes through the process of creating a Windows Server virtual machine o
      <li>Select region, click Yes</li>
      <li>Select keyboard layout, click Yes</li>
      <li>Select second keyboard, or just click Skip</li>
+     <li>Select "Set up for personal use", select "Offline account" & then select "Limited experience"</li>
+     <li>Enter a username for the local account (you don't need a password for it so skip that part)</li>
+     <li>Click "Not Now"</li>
+     <li>Uncheck all the privacy settings & click "Accept"</li>
+     <li>Click "Not Now" & wait for setup to complete</li>
    </ol>
  </li>
  <br />
  <br />
 
+<li><b>Setup Windows 10 user</b>
+  <ol>
+    <li>To make sure everything on the network works, click the start menu button, type "cmd", press enter
+      <ol>
+          <li>Type "ipconfig" & press enter. If there's no default gateway, we need to edit a few settings:
+            <ol>
+              <li>Go to server manager application, click "Tools" located at the top-right of the page & click "DHCP"</li>
+              <li>Under "IPv4" dropdown, click "Server Options"</li>
+              <li>Under "Actions" located at the right, click "More Actions" & click "Configure Options..."</li>
+              <li>Check the option "003 Router"</li>
+              <li>Under "IP Address:", type the IP address for the DHCP server ("172.16.0.1" in this example), click "Add" button</li>
+              <li>Click ok, right-click on the domain ("dc.mydomain.com" in this example), go to "All Tasks" and click "Restart"</li>
+            </ol>
+          </li>
+          <li>Try to ping "www.google.ca" and then try to ping the domain we created earlier ("mydomain.com" in this example)</li>
+          <li>If there's a response from both, that means the network has been properly configured</li>
+      </ol>
+    </li>
+    <li>Change hostname
+      <ol>
+        <li>Right-click start menu button & select "System" option</li>
+        <li>Go all the way down & select "Rename this PC (advanced)"</li>
+        <li>Click "Change..." button</li>
+        <li>Change computer name to the name of the VM</li>
+        <li>Under "Member of:", check the "Domain" option & type in the domain you created ("mydomain.com" in this example)</li>
+        <li>Click ok</li>
+        <li>Enter admin username & password (sometimes when creating your own user account, it will register it as the admin account)</li>
+        <li>Click ok, click close & click "Restart Now"</li>
+      </ol>
+    </li>
+    <li>While VM is restarting; 
+      <ol>
+        <li>Go back to DHCP settings on server machine (Server Manager app -> Tools -> DHCP)</li>
+        <li>Drop down domain controller & IPv4, select "Scope" folder</li>
+        <li>Select "Address Leases". When the client gets an address, it will appear in this section</li>
+        <li>Go to Active Directory (start menu -> type "Active Directory" & select app)</li>
+        <li>Click "Computers" folder. The client machine should show up here</li>
+      </ol>
+    </li>
+    <li>Once VM has restarted, login with one of the users we created
+      <ol>
+        <li>Click on the "Other user" option located at the bottom left of the screen</li>
+        <li>Enter any username we created & their respective password, press enter</li>
+        <li>You can repeat these last 2 steps to login with all the other users on different VM sessions</li>
+      </ol>
+    </li>
+  </ol>
+</li>
 </ol>
-
 
 <!--
  ```diff
