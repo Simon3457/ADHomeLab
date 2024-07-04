@@ -205,8 +205,8 @@ This lab goes through the process of creating a Windows Server virtual machine o
       </ol>
     </li>
     <li>Click second to left top folder icon “Open Script”, select script & click “Open”</li>
-    <li>Copy over PowerShell script from here (), or write the script yourself</li>
-    <li></li>
+    <li>Copy over PowerShell script from here (https://github.com/Simon3457/ADHomeLab/blob/main/ADScript/CreateUsers.ps1), or write the script yourself</li>
+    <li>Run the script from Windows PowerShell ISE. Users should be populating in the "_USERS" AD group</li>
   </ol>
 </li>
 <br />
