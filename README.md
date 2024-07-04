@@ -17,7 +17,6 @@ This lab goes through the process of creating a Windows Server virtual machine o
 
 <h2>Lab walk-through:</h2>
 <ol>
-  <h3><b>PART 1 - SETUP ENVIRONMENT</b></h3><br/>
   <li><b>Install Oracle VM VirtualBox</b>
     <ol>
       <li>Go to https://www.virtualbox.org/wiki/Downloads</li>
