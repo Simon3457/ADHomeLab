@@ -70,7 +70,7 @@ This lab goes through the process of creating a Windows Server virtual machine o
     <li>Setup IP address for internal network
       <ol>
         <li>Click network icon at bottom right tray, click network & then click “Change adapter options”</li>
-        <li>Identify the two networks as Internet (10.0.2.15) & internal (169.254.196.79) networks by clicking on each network icon and then clicking "status"</li>
+        <li>Identify the two networks as Internet (10.0.2.15) & internal (169.254.196.79) networks by clicking on each network icon and then clicking "Details..."</li>
         <li>Right-click the internal network, click properties, double-click Internal Protocol Version 4</li>
         <li>Click “Use the following IP address:”, enter the values on the diagram for NIC (internal)</li>
         <li>Click ok, exit network settings</li>
