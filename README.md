@@ -205,7 +205,7 @@ This lab goes through the process of creating a Windows Server virtual machine o
    <ol>
      <li>Open VirtualBox Manager application, click on “New” button</li>
      <li>Pick Windows 10 disk as the ISO image, choose a name & destination folder for the VM</li>
-     <li>Write a username & password we created earlier (for this example, password is "Password1" and username is "sboudreau"), as well as a hostname</li>
+     <li>Write a username & password we created earlier, as well as a hostname</li>
      <li>Pick its hardware settings</li>
      <li>Click next (x2) & click finish</li>
      <li>Right-click the new VM & click "settings"</li>
