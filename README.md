@@ -156,7 +156,7 @@ This lab goes through the process of creating a Windows Server virtual machine o
         <li>We can enter ranges to exclude on the next page, but for the lab we don’t need to. Click next</li>
         <li>We can enter lease duration on the next page, but for the lab we don’t need to. Click next</li>
         <li>Select “Yes, I want to configure these options now” & click next</li>
-        <li>Enter the IP address of the Domain Controller as the router, click “Add” & click next</li>
+        <li>Enter the IP address of the Domain Controller as the router (in this case, 172.16.0.1), click “Add” & click next</li>
         <li>Make sure the domain created earlier is the Parent domain (in this case, “mydomain.com”)</li>
         <li>Click next, you can enter WINS servers but they’re old, click next</li>
         <li>Select “Yes, I want to activate this scope now”, click next & click finish (You may have to right click “dc.domain.com”, click on “Authorize”, right click “dc.domain.com” & click “Refresh”)</li>
