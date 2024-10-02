@@ -106,7 +106,7 @@ This lab goes through the process of creating a Windows Server virtual machine o
     <li>Right-click administrator folder, go to “New”, click “User” & fill out info for admin account (info, then password, then click finish on confirmation page)</li>
     <li>Right-click on admin user & click on “Properties” & a new window will pop up</li>
     <li>Go to “members of” tab, click on “Add…” button & a new window will pop up</li>
-    <li>Enter the administrator domain name & click “Check Names” button to confirm it, click ok</li>
+    <li>Type in "domain admin" & click “Check Names” button to confirm it, click ok</li>
     <li>Click apply & ok buttons to the previous window</li>
   </ol>
 </li>
