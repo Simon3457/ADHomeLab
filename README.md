@@ -89,7 +89,7 @@ This lab goes through the process of creating a Windows Server virtual machine o
     <li>Select server & click next, pick “active directory domain services”</li>
     <li>Click next (x3)</li>
     <li>Click install</li>
-    <li>Once installation is complete, click “Promote this server to a domain controller”</li>
+    <li>Once installation is complete, click on the warning flag icon & click “Promote this server to a domain controller”</li>
     <li>Select option “add a new forest” & enter anything as the root domain name (example: “mydomain.com”) & click next</li>
     <li>Enter password</li>
     <li>Click next (x4)</li>
