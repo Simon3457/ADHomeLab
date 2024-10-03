@@ -48,7 +48,7 @@ This lab goes through the process of creating a Windows Server virtual machine o
 <li><b>Setup Windows Server 2019 VM</b>
   <ol>
     <li>Open VirtualBox application, click “New” button</li>
-    <li>Enter type as “Microsoft Windows” and version as “Other Windows (64-bit)” & click continue</li>
+    <li>Enter type as “Microsoft Windows” and version as “Other Windows (64-bit)” & click continue without entering the ISO file</li>
     <li>Enter defaults & personal choices for the rest until creation is complete</li>
     <li>Edit some settings
       <ol>
@@ -56,7 +56,7 @@ This lab goes through the process of creating a Windows Server virtual machine o
         <li>Go to network -> adapter 2 tab, enable network adapter & change “Attached To” setting to “Internal Network”</li>
       </ol>
     </li>
-    <li>Start the VM & select ISO file for Windows Server 2019, go through the installation process
+    <li>Start the VM, select ISO file for Windows Server 2019 & go through the installation process
       <ol>
         <li>Select Windows Server 2019 Standard Evaluation (Desktop Experience) version</li>
         <li>Select custom installation type, click next on allocation page, wait for installation</li>
