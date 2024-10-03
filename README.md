@@ -47,7 +47,7 @@ This lab goes through the process of creating a Windows Server virtual machine o
 
 <li><b>Setup Windows Server 2019 VM</b>
   <ol>
-    <li>Open VirtualBox application, click “New” button</li>
+    <li>Open VirtualBox application, click the “New” button</li>
     <li>Enter type as “Microsoft Windows” and version as “Other Windows (64-bit)” & click continue without entering the ISO file</li>
     <li>Enter defaults & personal choices for the rest until creation is complete</li>
     <li>Edit some settings
@@ -101,7 +101,7 @@ This lab goes through the process of creating a Windows Server virtual machine o
 
 <li><b>Configure Domain Admin Account</b>
   <ol>
-    <li>Log in again, click the start menu icon, go to “Windows Administrative Tools” & click “Active Directory Users and Computers”</li>
+    <li>If everything is set up properly, you should see the domain name behind your username. Log in again, click the start menu icon, go to “Windows Administrative Tools” & click “Active Directory Users and Computers”</li>
     <li>Right-click “mydomain.com”, go to “New”, click “Organizational Unit”, name the administrators folder (uncheck box for simulations) & click ok to create it</li>
     <li>Right-click administrator folder, go to “New”, click “User” & fill out info for admin account (info, then password, then click finish on confirmation page)</li>
     <li>Right-click on admin user & click on “Properties” & a new window will pop up</li>
