@@ -126,7 +126,7 @@ This lab goes through the process of creating a Windows Server virtual machine o
     <li>Click next (x3)</li>
     <li>Click install & click close once installation is complete</li>
     <li>At the top right of the Server Manager dashboard, click “Tools” & go to “Routing and Remote Access”</li>
-    <li>Click on the server name (DC in this case), right-click & click on “Configure and Enable Routing and Remote Access”</li>
+    <li>Right-click on the server selection & click on “Configure and Enable Routing and Remote Access”</li>
     <li>Click next, select NAT option, click next again</li>
     <li>Select “Use this public interface to connect to the Internet” option and select the “INTERNET” network interface (not the internal one)
       <ul><li>NOTE: This option might be greyed out. If it is, exit the wizard, go to step (v.) & repeat the processes up until here</li></ul>
