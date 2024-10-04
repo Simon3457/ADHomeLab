@@ -149,7 +149,6 @@ This lab goes through the process of creating a Windows Server virtual machine o
     <li>At the top right of the Server Manager dashboard, click “Tools” & go to “DHCP”</li>
     <li>We need to give our Domain Controller a scope that will give IP addresses in a certain range
       <ol>
-        <li>172.16.0.100 with a subnet mask</li>
         <li>Go to DHCP server dropdown & right click IPv4 & click “New Scope…”</li>
         <li>Click next, enter name (172.16.0.100-200) & click next</li>
         <li>Enter start IP & end IP addresses (in this case, 172.16.0.100 & 172.16.0.200), click next</li>
